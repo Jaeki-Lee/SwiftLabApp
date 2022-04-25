@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow()
-        window?.makeKeyAndVisible()
+//        window?.makeKeyAndVisible()
 //        window?.rootViewController = LabViewController()
-        window?.rootViewController = LabViewController()
+        window?.rootViewController = AutoSizingUITextViewTestController()
         
         return true
     }

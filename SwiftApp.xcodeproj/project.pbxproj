@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BFB0657114395D09122EF9C /* Pods_SwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E4731D827AFF3456861D99 /* Pods_SwiftApp.framework */; };
+		312C2A1A280CE36300E27C27 /* HorizontalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312C2A19280CE36300E27C27 /* HorizontalTableViewController.swift */; };
+		314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */; };
 		AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */; };
 		AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95E280C6CF3001D50C9 /* Extention.swift */; };
 		AB25A961280C70D8001D50C9 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A960280C70D8001D50C9 /* LabViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		312C2A19280CE36300E27C27 /* HorizontalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewController.swift; sourceTree = "<group>"; };
+		314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingUITextViewTestController.swift; sourceTree = "<group>"; };
 		46446E067E4ACFB5E31EB2A6 /* Pods-SwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0AC76FFE78E23F3C299652 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		88E4731D827AFF3456861D99 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */,
+				312C2A19280CE36300E27C27 /* HorizontalTableViewController.swift */,
+				314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */,
 			);
 			path = TestList;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 				AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */,
 				ABC683AE280BF24900846119 /* SceneDelegate.swift in Sources */,
 				AB25A961280C70D8001D50C9 /* LabViewController.swift in Sources */,
+				312C2A1A280CE36300E27C27 /* HorizontalTableViewController.swift in Sources */,
+				314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
