@@ -1,0 +1,6 @@
+framework module AddWith {
+  umbrella header "AddWith-umbrella.h"
+
+  export *
+  module * { export * }
+}
