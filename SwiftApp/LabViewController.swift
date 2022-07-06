@@ -12,7 +12,9 @@ import Then
 
 class LabViewController: UIViewController {
     let listOfTest : [TestItem] = [
-        TestItem(testSubject: "UserDefault", testObject: UserDefaultTestViewController())
+        TestItem(testSubject: "UserDefault", testObject: UserDefaultTestViewController()),
+        TestItem(testSubject: "AutoSizing UITextView", testObject: AutoSizingUITextViewTestController()),
+        TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController())
     ]
     
     //1
@@ -38,7 +40,6 @@ class LabViewController: UIViewController {
         
         self.navigationController?.navigationBar.topItem?.title = "Lab"
         
-        print(self.navigationController)
         
         self.setTableViewOption()
         
@@ -96,15 +97,15 @@ extension LabViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("tableView selected \(indexPath)")
-        
         let testItem = self.listOfTest[indexPath.row]
         let testController = testItem.testObject
         
-        print("tableView selected \(testController.self)")
-        
-        self.navigationController?.pushViewController(UserDefaultTestViewController(), animated: true)
+        self.navigationController?.pushViewController(testController, animated: true)
     }
 }
 
+struct TestItem {
+    let testSubject: String
+    let testObject: UIViewController
+}
 
