@@ -11,5 +11,6 @@ target 'SwiftApp' do
     	pod 'RxCocoa', '6.5.0'
 	pod 'Then'
 	pod 'AddWith'
-
+	pod 'Moya', '~> 15.0'
+	pod 'Moya/RxSwift', '~> 15.0'
 end

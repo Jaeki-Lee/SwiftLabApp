@@ -16,6 +16,10 @@
 		AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */; };
 		AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95E280C6CF3001D50C9 /* Extention.swift */; };
 		AB25A961280C70D8001D50C9 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A960280C70D8001D50C9 /* LabViewController.swift */; };
+		AB86C9B7287C691700BD23AF /* NetworManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9B6287C691700BD23AF /* NetworManager.swift */; };
+		AB86C9BA287C69F900BD23AF /* MyStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9B9287C69F900BD23AF /* MyStatusModel.swift */; };
+		AB86C9BC287C6BCE00BD23AF /* MyStatusTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */; };
+		AB86C9BE287C7ED500BD23AF /* MyStatusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9BD287C7ED500BD23AF /* MyStatusAPI.swift */; };
 		ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC683AB280BF24900846119 /* AppDelegate.swift */; };
 		ABC683AE280BF24900846119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC683AD280BF24900846119 /* SceneDelegate.swift */; };
 		ABC683B5280BF24D00846119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC683B4280BF24D00846119 /* Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultTestViewController.swift; sourceTree = "<group>"; };
 		AB25A95E280C6CF3001D50C9 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		AB25A960280C70D8001D50C9 /* LabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewController.swift; sourceTree = "<group>"; };
+		AB86C9B6287C691700BD23AF /* NetworManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworManager.swift; sourceTree = "<group>"; };
+		AB86C9B9287C69F900BD23AF /* MyStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusModel.swift; sourceTree = "<group>"; };
+		AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusTarget.swift; sourceTree = "<group>"; };
+		AB86C9BD287C7ED500BD23AF /* MyStatusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusAPI.swift; sourceTree = "<group>"; };
 		ABC683A8280BF24900846119 /* SwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC683AB280BF24900846119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABC683AD280BF24900846119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 		AB25A95B280C6940001D50C9 /* TestList */ = {
 			isa = PBXGroup;
 			children = (
+				AB86C9B3287C679800BD23AF /* MoyaTest */,
 				AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */,
 				312C2A19280CE36300E27C27 /* HorizontalTableViewController.swift */,
 				314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */,
@@ -115,6 +124,25 @@
 				3130CAD82875D0D50023D395 /* CustomFontTestController.swift */,
 			);
 			path = TestList;
+			sourceTree = "<group>";
+		};
+		AB86C9B3287C679800BD23AF /* MoyaTest */ = {
+			isa = PBXGroup;
+			children = (
+				AB86C9B8287C69DB00BD23AF /* Model */,
+				AB86C9B6287C691700BD23AF /* NetworManager.swift */,
+				AB86C9BD287C7ED500BD23AF /* MyStatusAPI.swift */,
+			);
+			path = MoyaTest;
+			sourceTree = "<group>";
+		};
+		AB86C9B8287C69DB00BD23AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB86C9B9287C69F900BD23AF /* MyStatusModel.swift */,
+				AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ABC6839F280BF24900846119 = {
@@ -268,14 +296,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC683C0280C506200846119 /* TestCell.swift in Sources */,
+				AB86C9BA287C69F900BD23AF /* MyStatusModel.swift in Sources */,
 				AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */,
 				ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */,
 				AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */,
+				AB86C9B7287C691700BD23AF /* NetworManager.swift in Sources */,
 				ABC683AE280BF24900846119 /* SceneDelegate.swift in Sources */,
 				AB25A961280C70D8001D50C9 /* LabViewController.swift in Sources */,
+				AB86C9BE287C7ED500BD23AF /* MyStatusAPI.swift in Sources */,
 				3130CAD72875C6250023D395 /* ScrollViewTestController.swift in Sources */,
 				312C2A1A280CE36300E27C27 /* HorizontalTableViewController.swift in Sources */,
 				314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */,
+				AB86C9BC287C6BCE00BD23AF /* MyStatusTarget.swift in Sources */,
 				3130CAD92875D0D50023D395 /* CustomFontTestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
