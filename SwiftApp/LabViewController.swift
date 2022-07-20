@@ -15,7 +15,8 @@ class LabViewController: UIViewController {
         TestItem(testSubject: "UserDefault", testObject: UserDefaultTestViewController()),
         TestItem(testSubject: "AutoSizing UITextView", testObject: AutoSizingUITextViewTestController()),
         TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController()),
-        TestItem(testSubject: "CustomFont", testObject: CustomFontTestController())
+        TestItem(testSubject: "CustomFont", testObject: CustomFontTestController()),
+        TestItem(testSubject: "Moya Test", testObject: CustomFontTestController())
     ]
     
     //1

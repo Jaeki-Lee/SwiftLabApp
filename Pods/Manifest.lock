@@ -1,5 +1,13 @@
 PODS:
   - AddWith (1.1.1)
+  - Alamofire (5.6.0)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -11,6 +19,8 @@ PODS:
 
 DEPENDENCIES:
   - AddWith
+  - Moya (~> 15.0)
+  - Moya/RxSwift (~> 15.0)
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
   - SnapKit (~> 5.0.0)
@@ -19,6 +29,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AddWith
+    - Alamofire
+    - Moya
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -27,12 +39,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AddWith: 89d764d4d292dfd82e484c1d96221800fc00e425
+  Alamofire: 0c07058209f211e3d32824f8e0766d7c44ac83b3
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 82f9cd0d2024f86fb60d7510931b12a325e8aa9b
+PODFILE CHECKSUM: 16381071edac460a49d54bd90eaf595e71ac9690
 
 COCOAPODS: 1.11.2
