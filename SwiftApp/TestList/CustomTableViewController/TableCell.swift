@@ -49,24 +49,17 @@ class TableCell: UITableViewCell {
     public lazy var collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout().then {
-            $0.minimumLineSpacing = 0
-            $0.minimumInteritemSpacing = 0
+            $0.minimumLineSpacing = 5
+            $0.minimumInteritemSpacing = 5
         }
     ).then {
         $0.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionCell")
         $0.delegate = self
         $0.dataSource = self
-        $0.isScrollEnabled = false
+        $0.isScrollEnabled = true
+        $0.allowsMultipleSelection = true
+        $0.allowsMultipleSelectionDuringEditing = true
     }
-    
-//    override func sizeThatFits(_ size: CGSize) -> CGSize {
-//        let collectionCellHeight = 50
-//        let rows = list.count / 5 // row 당 5개의 아이템
-//        let labelHeight = 20
-//        let height = CGFloat((collectionCellHeight * rows) + labelHeight)
-//        let width = contentView.frame.size.width
-//        return CGSize(width: width, height: height)
-//    }
 }
 
 extension TableCell: UICollectionViewDataSource {
@@ -84,12 +77,15 @@ extension TableCell: UICollectionViewDataSource {
 }
 
 extension TableCell: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
 }
 
 extension TableCell: UICollectionViewDelegateFlowLayout {
     //collectionCell 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width/5, height: 50)
+//        return CGSize(width: self.frame.width, height: 50)
     }
 }

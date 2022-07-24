@@ -10,6 +10,17 @@ import SnapKit
 import Then
 
 class CollectionViewCell: UICollectionViewCell {
+    
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                self.backgroundColor = .yellow
+            } else {
+                self.backgroundColor = .white
+            }
+        }
+    }
+    
     let padding: CGFloat = 5
     
     override init(frame: CGRect) {
@@ -29,7 +40,7 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     func commonInit() {
-        self.backgroundColor = .yellow
+        self.backgroundColor = .white
         self.contentView.addSubview(label)
         
         self.label.snp.makeConstraints { make in

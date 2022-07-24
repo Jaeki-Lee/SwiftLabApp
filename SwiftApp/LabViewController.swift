@@ -16,7 +16,8 @@ class LabViewController: UIViewController {
         TestItem(testSubject: "AutoSizing UITextView", testObject: AutoSizingUITextViewTestController()),
         TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController()),
         TestItem(testSubject: "CustomFont", testObject: CustomFontTestController()),
-        TestItem(testSubject: "CollectionCellInTableView", testObject: CustomTableViewController())
+        TestItem(testSubject: "CollectionCellInTableView", testObject: CustomTableViewController()),
+        TestItem(testSubject: "MultiSelectTableViewController", testObject: MultiSelectTableViewController())
     ]
     
     //1
