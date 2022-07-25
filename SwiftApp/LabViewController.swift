@@ -17,7 +17,8 @@ class LabViewController: UIViewController {
         TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController()),
         TestItem(testSubject: "CustomFont", testObject: CustomFontTestController()),
         TestItem(testSubject: "CollectionCellInTableView", testObject: CustomTableViewController()),
-        TestItem(testSubject: "MultiSelectTableViewController", testObject: MultiSelectTableViewController())
+        TestItem(testSubject: "MultiSelectTableViewController", testObject: MultiSelectTableViewController()),
+        TestItem(testSubject: "MultiSectionCollectionVC", testObject: MultiCollectionViewController())
     ]
     
     //1

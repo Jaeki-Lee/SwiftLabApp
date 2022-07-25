@@ -23,6 +23,9 @@
 		AB86C9BA287C69F900BD23AF /* MyStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9B9287C69F900BD23AF /* MyStatusModel.swift */; };
 		AB86C9BC287C6BCE00BD23AF /* MyStatusTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */; };
 		AB86C9BE287C7ED500BD23AF /* MyStatusAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB86C9BD287C7ED500BD23AF /* MyStatusAPI.swift */; };
+		ABA4B221288EF28100B2388E /* MultiCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4B220288EF28100B2388E /* MultiCollectionViewController.swift */; };
+		ABA4B223288EF57300B2388E /* MultiCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4B222288EF57300B2388E /* MultiCollectionViewHeader.swift */; };
+		ABA4B225288EF70C00B2388E /* MultiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4B224288EF70C00B2388E /* MultiCollectionViewCell.swift */; };
 		ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC683AB280BF24900846119 /* AppDelegate.swift */; };
 		ABC683AE280BF24900846119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC683AD280BF24900846119 /* SceneDelegate.swift */; };
 		ABC683B5280BF24D00846119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC683B4280BF24D00846119 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		AB86C9B9287C69F900BD23AF /* MyStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusModel.swift; sourceTree = "<group>"; };
 		AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusTarget.swift; sourceTree = "<group>"; };
 		AB86C9BD287C7ED500BD23AF /* MyStatusAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStatusAPI.swift; sourceTree = "<group>"; };
+		ABA4B220288EF28100B2388E /* MultiCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCollectionViewController.swift; sourceTree = "<group>"; };
+		ABA4B222288EF57300B2388E /* MultiCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCollectionViewHeader.swift; sourceTree = "<group>"; };
+		ABA4B224288EF70C00B2388E /* MultiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCollectionViewCell.swift; sourceTree = "<group>"; };
 		ABC683A8280BF24900846119 /* SwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC683AB280BF24900846119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABC683AD280BF24900846119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 		AB25A95B280C6940001D50C9 /* TestList */ = {
 			isa = PBXGroup;
 			children = (
+				ABA4B21E288EF24F00B2388E /* CollectionViewController */,
 				ABD5923D288D815F00C1C288 /* MultiSelect */,
 				AB86C9B3287C679800BD23AF /* MoyaTest */,
 				AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */,
@@ -165,6 +172,24 @@
 				AB86C9BB287C6BCE00BD23AF /* MyStatusTarget.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ABA4B21E288EF24F00B2388E /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4B21F288EF25F00B2388E /* MultiCollectionViewController */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		ABA4B21F288EF25F00B2388E /* MultiCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4B220288EF28100B2388E /* MultiCollectionViewController.swift */,
+				ABA4B222288EF57300B2388E /* MultiCollectionViewHeader.swift */,
+				ABA4B224288EF70C00B2388E /* MultiCollectionViewCell.swift */,
+			);
+			path = MultiCollectionViewController;
 			sourceTree = "<group>";
 		};
 		ABC6839F280BF24900846119 = {
@@ -336,6 +361,7 @@
 			files = (
 				ABC683C0280C506200846119 /* TestCell.swift in Sources */,
 				AB86C9BA287C69F900BD23AF /* MyStatusModel.swift in Sources */,
+				ABA4B223288EF57300B2388E /* MultiCollectionViewHeader.swift in Sources */,
 				AB31AEE9288856E600A51ACF /* CollectionViewCell.swift in Sources */,
 				AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */,
 				ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */,
@@ -350,8 +376,10 @@
 				3130CAD72875C6250023D395 /* ScrollViewTestController.swift in Sources */,
 				312C2A1A280CE36300E27C27 /* HorizontalTableViewController.swift in Sources */,
 				314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */,
+				ABA4B221288EF28100B2388E /* MultiCollectionViewController.swift in Sources */,
 				AB86C9BC287C6BCE00BD23AF /* MyStatusTarget.swift in Sources */,
 				AB31AEE7288854A200A51ACF /* TableCell.swift in Sources */,
+				ABA4B225288EF70C00B2388E /* MultiCollectionViewCell.swift in Sources */,
 				3130CAD92875D0D50023D395 /* CustomFontTestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

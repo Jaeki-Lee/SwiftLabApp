@@ -48,7 +48,7 @@ extension MultiSelectTableViewController: UITableViewDelegate {
 
         //cell 안에서 setSelected 로 셀 을 선택하면 선택 됐을 때만 들어오고 선택 해제 할때는 들어오지 않는다.
         print(indexPath.row)
-    
+
     }
     
 }
