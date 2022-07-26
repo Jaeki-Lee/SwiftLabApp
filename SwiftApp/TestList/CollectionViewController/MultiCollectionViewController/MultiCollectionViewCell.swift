@@ -17,6 +17,16 @@ class MultiCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                self.view.backgroundColor = .yellow
+            } else {
+                self.view.backgroundColor = .white
+            }
+        }
+    }
+    
     private let view = UIView().then {
         $0.layer.borderColor = UIColor.gray.cgColor
         $0.layer.borderWidth = 1
@@ -29,6 +39,7 @@ class MultiCollectionViewCell: UICollectionViewCell {
         $0.minimumScaleFactor = 0.5
         $0.numberOfLines = 1
         $0.textAlignment = .center
+        $0.font = UIFont.boldSystemFont(ofSize: 14)
     }
     
     internal func createConstraints() {

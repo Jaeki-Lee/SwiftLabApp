@@ -19,8 +19,8 @@ class MultiCollectionViewController: UIViewController {
     public lazy var collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout().then {
-            $0.minimumLineSpacing = 5
-            $0.minimumInteritemSpacing = 5
+//            $0.minimumLineSpacing = 5
+//            $0.minimumInteritemSpacing = 5
             $0.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
     ).then {
@@ -35,8 +35,11 @@ class MultiCollectionViewController: UIViewController {
         $0.delegate = self
         $0.dataSource = self
         $0.isScrollEnabled = true
-        $0.allowsMultipleSelection = true
-        $0.allowsMultipleSelectionDuringEditing = true
+//        $0.allowsMultipleSelection = true
+        $0.allowsMultipleSelection = false
+//        $0.allowsMultipleSelectionDuringEditing = true
+//        $0.allowsMultipleSelection = true
+//        $0.allowsMultipleSelectionDuringEditing = true
     }
     
     override func viewDidLoad() {
@@ -44,7 +47,7 @@ class MultiCollectionViewController: UIViewController {
         
         self.sections = [
             Section(sectionName: "SPACES", rowData: ["Air Conditioner", "Apple HomePod"]),
-            Section(sectionName: "HOME APPLIANCES", rowData: ["Ceiling Fan", "Fan", "Desk Lamp", "Iron", "PC on Desk", "Plug", "Power Strip", "Lorem", "Lorem", "Lorem", "Lorem"]),
+            Section(sectionName: "HOME APPLIANCES", rowData: ["Ceiling Fan", "Fan", "Desk Lamp", "Iron", "PC on Desk", "Plug", "Power Strip", "L", "Lorem", "Lorem", "Lorem"]),
         ]
         
         self.view.add(
@@ -114,22 +117,35 @@ extension MultiCollectionViewController: UICollectionViewDelegateFlowLayout {
 
     //collection header 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
         return CGSize(width: 284, height: 25)
     }
     
     //collectionCell 사이즈
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.frame.width / 4, height: 40)
-//        //        return CGSize(width: self.frame.width, height: 50)
-//    }
-    
-//    //셀 가로 방향 스페이싱
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let textContent = self.sections[indexPath.section].rowData[indexPath.row]
+        let textContentSize = textContent.size(withAttributes: [
+            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)
+        ])
+        let padding = CGFloat(40)
+
+        return CGSize(width: textContentSize.width + padding, height: 30)
+        
+        //tableView 셀 크기만큼 하면 tableView 와 비슷하게 사용
+//        let screenSize = self.view.frame.size
+//        let width = screenSize.width - 40
 //
-//    //셀 세로 방향 스페이싱
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0
-//    }
+//        return CGSize(width: width, height: 40)
+    }
+    
+    //셀 가로 방향 스페이싱
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
+    }
+
+    //셀 세로 방향 스페이싱
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
 }
