@@ -13,6 +13,8 @@
 		3130CAD92875D0D50023D395 /* CustomFontTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130CAD82875D0D50023D395 /* CustomFontTestController.swift */; };
 		3130CADE2875D4C60023D395 /* universidad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3130CADB2875D2D40023D395 /* universidad.ttf */; };
 		314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */; };
+		31514B72292F649B006A0F51 /* TableViewScrollToTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31514B71292F649B006A0F51 /* TableViewScrollToTestController.swift */; };
+		31514B74292F65E5006A0F51 /* ScrollToTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31514B73292F65E5006A0F51 /* ScrollToTestTableViewCell.swift */; };
 		AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95C280C6954001D50C9 /* UserDefaultTestViewController.swift */; };
 		AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A95E280C6CF3001D50C9 /* Extention.swift */; };
 		AB25A961280C70D8001D50C9 /* LabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25A960280C70D8001D50C9 /* LabViewController.swift */; };
@@ -53,6 +55,8 @@
 		3130CAE92875D7620023D395 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3130CAEA2875D7620023D395 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingUITextViewTestController.swift; sourceTree = "<group>"; };
+		31514B71292F649B006A0F51 /* TableViewScrollToTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewScrollToTestController.swift; sourceTree = "<group>"; };
+		31514B73292F65E5006A0F51 /* ScrollToTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToTestTableViewCell.swift; sourceTree = "<group>"; };
 		46446E067E4ACFB5E31EB2A6 /* Pods-SwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7D0AC76FFE78E23F3C299652 /* Pods-SwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftApp.release.xcconfig"; path = "Target Support Files/Pods-SwiftApp/Pods-SwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		88E4731D827AFF3456861D99 /* Pods_SwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +124,15 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		31514B70292F644D006A0F51 /* TableViewScrollToTest */ = {
+			isa = PBXGroup;
+			children = (
+				31514B71292F649B006A0F51 /* TableViewScrollToTestController.swift */,
+				31514B73292F65E5006A0F51 /* ScrollToTestTableViewCell.swift */,
+			);
+			path = TableViewScrollToTest;
+			sourceTree = "<group>";
+		};
 		73A010523C56E38D185A13D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +145,7 @@
 		AB25A95B280C6940001D50C9 /* TestList */ = {
 			isa = PBXGroup;
 			children = (
+				31514B70292F644D006A0F51 /* TableViewScrollToTest */,
 				ABA4B21E288EF24F00B2388E /* CollectionViewController */,
 				ABD5923D288D815F00C1C288 /* MultiSelect */,
 				AB86C9B3287C679800BD23AF /* MoyaTest */,
@@ -366,8 +380,10 @@
 				AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */,
 				ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */,
 				AB25A95F280C6CF3001D50C9 /* Extention.swift in Sources */,
+				31514B74292F65E5006A0F51 /* ScrollToTestTableViewCell.swift in Sources */,
 				AB86C9B7287C691700BD23AF /* NetworManager.swift in Sources */,
 				ABD5923F288D817500C1C288 /* MultiSelectTableViewController.swift in Sources */,
+				31514B72292F649B006A0F51 /* TableViewScrollToTestController.swift in Sources */,
 				ABD59242288D81E600C1C288 /* MultiSelectionTableViewCell.swift in Sources */,
 				ABC683AE280BF24900846119 /* SceneDelegate.swift in Sources */,
 				AB31AEE4288853D900A51ACF /* CustomTableViewController.swift in Sources */,
