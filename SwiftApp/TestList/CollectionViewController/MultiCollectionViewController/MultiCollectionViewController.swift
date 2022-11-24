@@ -16,6 +16,13 @@ struct Section {
 class MultiCollectionViewController: UIViewController {
     var sections = [Section]()
 
+    private let datePicker = UIDatePicker().then {
+        $0.datePickerMode = .date
+        $0.backgroundColor = .white
+        $0.preferredDatePickerStyle = .wheels
+        $0.timeZone = NSTimeZone.local
+    }
+    
     public lazy var collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: UICollectionViewFlowLayout().then {
@@ -48,6 +55,7 @@ class MultiCollectionViewController: UIViewController {
         self.sections = [
             Section(sectionName: "SPACES", rowData: ["Air Conditioner", "Apple HomePod"]),
             Section(sectionName: "HOME APPLIANCES", rowData: ["Ceiling Fan", "Fan", "Desk Lamp", "Iron", "PC on Desk", "Plug", "Power Strip", "L", "Lorem", "Lorem", "Lorem"]),
+            Section(sectionName: "Date Picker", rowData: [""])
         ]
         
         self.view.add(
@@ -89,14 +97,49 @@ extension MultiCollectionViewController: UICollectionViewDataSource {
     
     //Cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = self.collectionView.dequeueReusableCell(
             withReuseIdentifier: MultiCollectionViewCell.reuseId,
             for: indexPath) as! MultiCollectionViewCell
-
-        cell.createConstraints()
-        cell.setValues(label: self.sections[indexPath.section].rowData[indexPath.row])
+        
+        if self.sections[indexPath.section].sectionName == "Date Picker" {
+            cell.createConstraintForDatePicker()
+            cell.setValueForDatePicker(label: "(선택)")
+            cell.delegate = self
+        } else {
+            cell.createConstraintForNormal()
+            cell.setValueForNormal(label: self.sections[indexPath.section].rowData[indexPath.row])
+        }
+        
         return cell
     }
+}
+
+extension MultiCollectionViewController: MultiCollectionViewCellDelegate {
+    func showDatePicker() {
+        self.view.addSubview(self.datePicker)
+        
+        self.datePicker.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.height.equalTo(300)
+        }
+        
+        self.datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+    }
+    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+          
+          // Create date formatter
+          let dateFormatter: DateFormatter = DateFormatter()
+          
+          // Set date format
+          dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
+          
+          // Apply date format
+          let selectedDate: String = dateFormatter.string(from: sender.date)
+          
+          print("Selected value \(selectedDate)")
+      }
 }
 
 extension MultiCollectionViewController: UICollectionViewDelegate {
@@ -124,13 +167,21 @@ extension MultiCollectionViewController: UICollectionViewDelegateFlowLayout {
     //collectionCell 사이즈
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let textContent = self.sections[indexPath.section].rowData[indexPath.row]
-        let textContentSize = textContent.size(withAttributes: [
-            NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)
-        ])
-        let padding = CGFloat(40)
+        print("collectionView size")
+        
+        if self.sections[indexPath.section].sectionName == "Date Picker" {
+            let width = self.view.frame.size.width - (24 * 2)
+            
+            return CGSize(width: width, height: 50)
+        } else {
+            let textContent = self.sections[indexPath.section].rowData[indexPath.row]
+            let textContentSize = textContent.size(withAttributes: [
+                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 14)
+            ])
+            let padding = CGFloat(40)
 
-        return CGSize(width: textContentSize.width + padding, height: 30)
+            return CGSize(width: textContentSize.width + padding, height: 30)
+        }
         
         //tableView 셀 크기만큼 하면 tableView 와 비슷하게 사용
 //        let screenSize = self.view.frame.size
@@ -139,12 +190,12 @@ extension MultiCollectionViewController: UICollectionViewDelegateFlowLayout {
 //        return CGSize(width: width, height: 40)
     }
     
-    //셀 가로 방향 스페이싱
+    //셀 세로 방향 스페이싱
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return 0
     }
 
-    //셀 세로 방향 스페이싱
+    //셀 가로 방향 스페이싱
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
