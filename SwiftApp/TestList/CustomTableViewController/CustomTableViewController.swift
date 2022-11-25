@@ -45,16 +45,22 @@ extension CustomTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellID, for: indexPath) as! TableCell
         cell.label.text = "\(list[indexPath.row]) \(indexPath.row)"
+        
+        //cell 안의 콜렉션뷰가 갱신이 된후 테이블뷰 갱신
+        cell.frame = tableView.bounds
+        cell.layoutIfNeeded()
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tableViewLabel = 20
-        let collectionViewCellHeight = 50
-        let rows = 2
+//        let tableViewLabel = 20
+//        let collectionViewCellHeight = 50
+//        let rows = 2
+//
+//        let height = CGFloat((collectionViewCellHeight * rows) + tableViewLabel)
+//
+//        return height
         
-        let height = CGFloat((collectionViewCellHeight * rows) + tableViewLabel)
-        
-        return height
+        return UITableView.automaticDimension
     }
 }

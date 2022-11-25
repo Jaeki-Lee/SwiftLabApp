@@ -12,6 +12,9 @@
 		3130CAD72875C6250023D395 /* ScrollViewTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130CAD62875C6250023D395 /* ScrollViewTestController.swift */; };
 		3130CAD92875D0D50023D395 /* CustomFontTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130CAD82875D0D50023D395 /* CustomFontTestController.swift */; };
 		3130CADE2875D4C60023D395 /* universidad.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3130CADB2875D2D40023D395 /* universidad.ttf */; };
+		31450B46293086FB000DADDC /* CollectionViewInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31450B45293086FB000DADDC /* CollectionViewInTableViewController.swift */; };
+		31450B4829308C4C000DADDC /* NomalTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31450B4729308C4C000DADDC /* NomalTypeTableViewCell.swift */; };
+		31450B4A29308C62000DADDC /* CollectionViewTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31450B4929308C62000DADDC /* CollectionViewTypeTableViewCell.swift */; };
 		314A0DD02816C63200FE0483 /* AutoSizingUITextViewTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */; };
 		31514B72292F649B006A0F51 /* TableViewScrollToTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31514B71292F649B006A0F51 /* TableViewScrollToTestController.swift */; };
 		31514B74292F65E5006A0F51 /* ScrollToTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31514B73292F65E5006A0F51 /* ScrollToTestTableViewCell.swift */; };
@@ -54,6 +57,9 @@
 		3130CAE82875D7620023D395 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		3130CAE92875D7620023D395 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3130CAEA2875D7620023D395 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		31450B45293086FB000DADDC /* CollectionViewInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewInTableViewController.swift; sourceTree = "<group>"; };
+		31450B4729308C4C000DADDC /* NomalTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomalTypeTableViewCell.swift; sourceTree = "<group>"; };
+		31450B4929308C62000DADDC /* CollectionViewTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTypeTableViewCell.swift; sourceTree = "<group>"; };
 		314A0DCF2816C63200FE0483 /* AutoSizingUITextViewTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSizingUITextViewTestController.swift; sourceTree = "<group>"; };
 		31514B71292F649B006A0F51 /* TableViewScrollToTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewScrollToTestController.swift; sourceTree = "<group>"; };
 		31514B73292F65E5006A0F51 /* ScrollToTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToTestTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,6 +130,16 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		31450B44293086D1000DADDC /* CollectionViewInTableView */ = {
+			isa = PBXGroup;
+			children = (
+				31450B45293086FB000DADDC /* CollectionViewInTableViewController.swift */,
+				31450B4729308C4C000DADDC /* NomalTypeTableViewCell.swift */,
+				31450B4929308C62000DADDC /* CollectionViewTypeTableViewCell.swift */,
+			);
+			path = CollectionViewInTableView;
+			sourceTree = "<group>";
+		};
 		31514B70292F644D006A0F51 /* TableViewScrollToTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +161,7 @@
 		AB25A95B280C6940001D50C9 /* TestList */ = {
 			isa = PBXGroup;
 			children = (
+				31450B44293086D1000DADDC /* CollectionViewInTableView */,
 				31514B70292F644D006A0F51 /* TableViewScrollToTest */,
 				ABA4B21E288EF24F00B2388E /* CollectionViewController */,
 				ABD5923D288D815F00C1C288 /* MultiSelect */,
@@ -373,9 +390,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31450B46293086FB000DADDC /* CollectionViewInTableViewController.swift in Sources */,
 				ABC683C0280C506200846119 /* TestCell.swift in Sources */,
 				AB86C9BA287C69F900BD23AF /* MyStatusModel.swift in Sources */,
 				ABA4B223288EF57300B2388E /* MultiCollectionViewHeader.swift in Sources */,
+				31450B4A29308C62000DADDC /* CollectionViewTypeTableViewCell.swift in Sources */,
 				AB31AEE9288856E600A51ACF /* CollectionViewCell.swift in Sources */,
 				AB25A95D280C6954001D50C9 /* UserDefaultTestViewController.swift in Sources */,
 				ABC683AC280BF24900846119 /* AppDelegate.swift in Sources */,
@@ -397,6 +416,7 @@
 				AB31AEE7288854A200A51ACF /* TableCell.swift in Sources */,
 				ABA4B225288EF70C00B2388E /* MultiCollectionViewCell.swift in Sources */,
 				3130CAD92875D0D50023D395 /* CustomFontTestController.swift in Sources */,
+				31450B4829308C4C000DADDC /* NomalTypeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

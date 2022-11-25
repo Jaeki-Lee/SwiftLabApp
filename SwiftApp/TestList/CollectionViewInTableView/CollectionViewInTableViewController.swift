@@ -1,14 +1,14 @@
 //
-//  TableViewScrollToTestController.swift
+//  CollectionViewInTableViewController.swift
 //  SwiftApp
 //
-//  Created by trost.jk on 2022/11/24.
+//  Created by trost.jk on 2022/11/25.
 //
 
 import SnapKit
 import UIKit
 
-class TableViewScrollToTestController: UIViewController {
+class CollectionViewInTableViewController: UIViewController {
     
     var testArray = [String]()
     
@@ -64,7 +64,7 @@ class TableViewScrollToTestController: UIViewController {
     
 }
 
-extension TableViewScrollToTestController: UITableViewDelegate, UITableViewDataSource {
+extension CollectionViewInTableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return testArray.count
@@ -82,11 +82,7 @@ extension TableViewScrollToTestController: UITableViewDelegate, UITableViewDataS
         return 40
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.scrollToTop()
-        self.scrollToMiddle()
-//        self.scrollToBottom()
-    }
 }
+
 
 

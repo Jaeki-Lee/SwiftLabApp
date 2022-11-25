@@ -16,10 +16,12 @@ class LabViewController: UIViewController {
         TestItem(testSubject: "AutoSizing UITextView", testObject: AutoSizingUITextViewTestController()),
         TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController()),
         TestItem(testSubject: "CustomFont", testObject: CustomFontTestController()),
-        TestItem(testSubject: "CollectionCellInTableView", testObject: CustomTableViewController()),
+        //https://medium.com/@ar.sarris/self-sizing-collectionview-inside-a-tableview-f1fd4f42c44d 참고
+        TestItem(testSubject: "CollectionCellInTableView 오토레이아웃 적용", testObject: CustomTableViewController()),
         TestItem(testSubject: "MultiSelectTableViewController", testObject: MultiSelectTableViewController()),
         TestItem(testSubject: "MultiSectionCollectionVC", testObject: MultiCollectionViewController()),
-        TestItem(testSubject: "TableViewScrollToTest", testObject: TableViewScrollToTestController())
+        TestItem(testSubject: "TableViewScrollToTest", testObject: TableViewScrollToTestController()),
+        TestItem(testSubject: "CollectionViewInTableViewController", testObject: CollectionViewInTableViewController())
     ]
     
     //1
