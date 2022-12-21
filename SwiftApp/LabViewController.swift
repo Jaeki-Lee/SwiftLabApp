@@ -12,6 +12,7 @@ import Then
 
 class LabViewController: UIViewController {
     let listOfTest : [TestItem] = [
+        
         TestItem(testSubject: "UserDefault", testObject: UserDefaultTestViewController()),
         TestItem(testSubject: "AutoSizing UITextView", testObject: AutoSizingUITextViewTestController()),
         TestItem(testSubject: "ScrollView", testObject: ScrollViewTestController()),
