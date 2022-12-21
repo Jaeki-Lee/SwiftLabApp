@@ -21,7 +21,9 @@ class LabViewController: UIViewController {
         TestItem(testSubject: "MultiSelectTableViewController", testObject: MultiSelectTableViewController()),
         TestItem(testSubject: "MultiSectionCollectionVC", testObject: MultiCollectionViewController()),
         TestItem(testSubject: "TableViewScrollToTest", testObject: TableViewScrollToTestController()),
-        TestItem(testSubject: "CollectionViewInTableViewController", testObject: CollectionViewInTableViewController())
+        TestItem(testSubject: "CollectionViewInTableViewController", testObject: CollectionViewInTableViewController()),
+        TestItem(testSubject: "테이블뷰 화면 캡쳐", testObject: CustomTableViewController(isCaptureOn: true)),
+        TestItem(testSubject: "스클롤뷰 화면 캡쳐", testObject: ScrollViewTestController(isCaptureOn: true))
     ]
     
     //1
